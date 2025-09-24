@@ -1,0 +1,35 @@
+{
+  "name": "n8n-custom-random-node-project",
+  "version": "1.0.0",
+  "description": "Projeto com custom node Random para n8n que gera números aleatórios usando Random.org API",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:custom-node && npm run copy-custom-node",
+    "build:custom-node": "cd custom-nodes/n8n-nodes-random && npm run build",
+    "copy-custom-node": "mkdir -p .n8n/custom && cp -r custom-nodes/n8n-nodes-random/dist/* .n8n/custom/",
+    "dev": "docker compose up -d",
+    "stop": "docker compose down",
+    "logs": "docker compose logs -f n8n",
+    "clean": "docker compose down -v && docker system prune -f"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/n8n-custom-random-node-project.git"
+  },
+  "keywords": [
+    "n8n",
+    "custom-node",
+    "random",
+    "automation",
+    "workflow"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0"
+  }
+}

@@ -11,7 +11,6 @@ Este projeto implementa um conector customizado para n8n que recebe inputs de va
 - **🎯 Operação única**: "True Random Number Generator"
 - **📊 Inputs configuráveis**: Valores mínimo e máximo (inteiros)
 - **🔗 Integração com Random.org**: Utiliza a API oficial para gerar números verdadeiramente aleatórios
-- **🎨 Interface amigável**: Nomes descritivos e validação de entrada
 - **🖼️ Ícone customizado**: SVG personalizado para fácil identificação
 
 ## 🛠️ Pré-requisitos
@@ -25,7 +24,7 @@ Este projeto implementa um conector customizado para n8n que recebe inputs de va
 ### 1. Clone o repositório
 
 \`\`\`bash
-git clone <repository-url>
+git clone <https://github.com/ArthurPNeves/random-node-n8n-onfly.git>
 cd n8n-custom-random-node-project
 \`\`\`
 
@@ -36,8 +35,8 @@ cd n8n-custom-random-node-project
 npm install
 
 # Dependências do custom node
-cd custom-nodes/n8n-nodes-random
-npm install
+cd custom-nodes/n8n-nodes-random \`\`\`
+npm install \`\`\`
 cd ../..
 \`\`\`
 

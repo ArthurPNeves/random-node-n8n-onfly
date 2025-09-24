@@ -14,7 +14,7 @@ export class Random implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Generate true random numbers using Random.org API',
+		description: 'Gerador de números verdadeiramente aleatórios usando API do Random.org',
 		defaults: {
 			name: 'Random',
 		},
@@ -32,13 +32,13 @@ export class Random implements INodeType {
 					{
 						name: 'True Random Number Generator',
 						value: 'trueRandomNumber',
-						description: 'Generate a true random number using Random.org API',
-						action: 'Generate a true random number',
+						description: 'Gera um número verdadeiramente aleatório usando a API do Random.org',
+						action: 'Gerar número aleatório verdadeiro',
 					},
 				],
 			},
 			{
-				displayName: 'Minimum Value',
+				displayName: 'Valor Mínimo',
 				name: 'min',
 				type: 'number',
 				default: 1,
@@ -48,14 +48,14 @@ export class Random implements INodeType {
 						operation: ['trueRandomNumber'],
 					},
 				},
-				description: 'The minimum value for the random number (inclusive)',
+				description: 'O valor mínimo para o número aleatório (incluído no resultado)',
 				typeOptions: {
 					minValue: -1000000000,
 					maxValue: 1000000000,
 				},
 			},
 			{
-				displayName: 'Maximum Value',
+				displayName: 'Valor Máximo',
 				name: 'max',
 				type: 'number',
 				default: 100,
@@ -65,7 +65,7 @@ export class Random implements INodeType {
 						operation: ['trueRandomNumber'],
 					},
 				},
-				description: 'The maximum value for the random number (inclusive)',
+				description: 'O valor máximo para o número aleatório (incluído no resultado)',
 				typeOptions: {
 					minValue: -1000000000,
 					maxValue: 1000000000,

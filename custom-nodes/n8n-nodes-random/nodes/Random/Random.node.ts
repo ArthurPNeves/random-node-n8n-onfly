@@ -86,16 +86,13 @@ export class Random implements INodeType {
 				const max = this.getNodeParameter('max', i) as number;
 
 				// Validate input parameters
-				if (min > max) {
-					throw new NodeOperationError(
-						this.getNode(),
-						`Minimum value (${min}) cannot be greater than maximum value (${max})`,
-						{ itemIndex: i }
-					);
-				}
+                if (min >= max) {
+                    throw new NodeOperationError(this.getNode(), `Valor mínimo (${min}) 
+                    não pode ser maior ou igual que valor máximo (${max})`, { itemIndex: i });
+                }
 
 				try {
-					// Call Random.org API
+					// Chamada de api Random.org API
 					const randomNumber = await Random.generateRandomNumber(min, max);
 					
 					const newItem: INodeExecutionData = {

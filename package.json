@@ -14,16 +14,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username/n8n-custom-random-node-project.git"
+    "url": "git+https://github.com/ArthurPNeves/random-node-n8n-onfly.git"
   },
   "keywords": [
     "n8n",
     "custom-node",
     "random",
     "automation",
-    "workflow"
+    "workflow",
+    "onfly"
   ],
-  "author": "Your Name",
+  "author": "Arthur P. Neves <arthur.p.neves@gmail.com>",
   "license": "MIT",
   "engines": {
     "node": ">=22.0.0"

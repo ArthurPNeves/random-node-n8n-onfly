@@ -9,14 +9,15 @@
     "numbers"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/ArthurPNeves/random-node-n8n-onfly#readme",
   "author": {
-    "name": "Arthur",
-    "email": "your.email@example.com"
+    "name": "Arthur P. Neves",
+    "email": "arthur@example.com",
+    "url": "https://github.com/ArthurPNeves"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/n8n-nodes-random.git"
+    "url": "https://github.com/ArthurPNeves/random-node-n8n-onfly.git"
   },
   "engines": {
     "node": ">=22.0.0"

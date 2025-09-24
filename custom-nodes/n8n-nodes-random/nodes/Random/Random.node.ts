@@ -110,7 +110,7 @@ export class Random implements INodeType {
 					const errorMessage = error instanceof Error ? error.message : 'Unknown error';
 					throw new NodeOperationError(
 						this.getNode(),
-						`Failed to generate random number: ${errorMessage}`,
+						`Falha ao gerar numero aleatório: ${errorMessage}`,
 						{ itemIndex: i }
 					);
 				}

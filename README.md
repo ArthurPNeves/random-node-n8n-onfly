@@ -75,6 +75,13 @@ Abra seu navegador e acesse: http://localhost:5679
    - **Maximum Value**: Valor máximo desejado (ex: 100)
 5. **Execute o workflow** para gerar um número aleatório
 
+6. **Verificar funcionamento**:
+   ```bash
+   # Ver logs em tempo real
+   docker compose logs n8n -f
+   ```
+
+
 ### 📊 Exemplo de Saída
 
 json
@@ -103,6 +110,36 @@ npm run logs
 # Limpar containers e volumes
 npm run clean
 
+### Variáveis de Ambiente
+
+O projeto utiliza as seguintes variáveis de ambiente no Docker Compose:
+
+#### PostgreSQL
+- `POSTGRES_DB=n8n` - Nome do banco de dados
+- `POSTGRES_USER=n8n` - Usuário do banco
+- `POSTGRES_PASSWORD=n8n_password` - Senha do banco
+
+#### n8n
+- `DB_TYPE=postgresdb` - Tipo do banco de dados
+- `DB_POSTGRESDB_HOST=postgres` - Host do PostgreSQL
+- `DB_POSTGRESDB_PORT=5432` - Porta do PostgreSQL
+- `DB_POSTGRESDB_DATABASE=n8n` - Nome do banco
+- `DB_POSTGRESDB_USER=n8n` - Usuário do banco
+- `DB_POSTGRESDB_PASSWORD=n8n_password` - Senha do banco
+- `N8N_BASIC_AUTH_ACTIVE=true` - Ativar autenticação básica
+- `N8N_BASIC_AUTH_USER=admin` - Usuário de acesso
+- `N8N_BASIC_AUTH_PASSWORD=password123` - Senha de acesso
+- `N8N_CUSTOM_EXTENSIONS=/home/node/.n8n/custom` - Pasta dos custom nodes
+
+### Banco de Dados
+
+O PostgreSQL é usado para armazenar:
+- **Workflows** criados
+- **Histórico de execuções**
+- **Credenciais** (criptografadas)
+- **Configurações** do sistema
+- **Dados de usuários**
+
 ## 🔍 Desenvolvimento
 
 ### Alterações no Custom Node
@@ -110,11 +147,15 @@ npm run clean
 Após fazer alterações no código do custom node:
 
 1. **Rebuild o node**:
+   ```bash
    npm run build
+   ```
 
 2. **Reinicie o n8n**:
+   ```bash
    npm run stop
    npm run dev
+   ```
 
 
 ## 🌐 API do Random.org

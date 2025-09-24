@@ -35,10 +35,9 @@ cd n8n-custom-random-node-project
 npm install
 
 # Dependências do custom node
-cd custom-nodes/n8n-nodes-random \`\`\`
-npm install \`\`\`
-cd ../..
-\`\`\`
+cd custom-nodes/n8n-nodes-random  
+npm install  
+cd ../..  
 
 ### 3. Build do custom node
 
